@@ -16,6 +16,7 @@ func MyInfo(w http.ResponseWriter, r *http.Request) {
 	resp["user-agent"] = r.UserAgent()
 	resp["accept-language"] = r.Header.Get("Accept-Language")
 	jsonResp, err := json.Marshal(resp)
+	
 	if err != nil {
 		fmt.Printf("Error happened in JSON marshal. Err: %s", err)
 	} else {
