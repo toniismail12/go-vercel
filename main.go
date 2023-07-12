@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-vercel/api/routers"
+	"go-vercel/routers"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
