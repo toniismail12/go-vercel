@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-vercel/routers"
+	"go-vercel/controllers"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
@@ -10,7 +10,8 @@ import (
 func main() {
 	app := fiber.New()
 
-	routers.Setup(app)
+	app.Get("/", controllers.AppName)
+	app.Get("/app", controllers.AppName)
 
 	err := app.Listen(":" + "9001")
 	if err != nil {
